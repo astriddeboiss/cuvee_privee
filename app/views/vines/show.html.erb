@@ -1,8 +1,20 @@
+require_relative '../../models/booking.rb'
+
 <h1><%= @vine.name %></h1>
-<ul>
-  <li><%= @vine.picture %></li>
-  <li><%= @vine.location %></li>
-  <li><%= @vine.variety %></li>
-  <li><%= @vine.description %></li>
-  <li><%= @vine.price %></li>
-</ul>
+<div>
+  <ul>
+    <li><%= @vine.picture %></li>
+    <li><%= @vine.location %></li>
+    <li><%= @vine.variety %></li>
+    <li><%= @vine.description %></li>
+    <li><%= @vine.price %></li>
+  </ul>
+</div>
+
+<div>
+  <% @booking = Booking.new %>
+  <%= simple_form_for @booking do |f|%>
+  <%= f.input :start_at %>
+  <%= f.submit "Adopt this wine and pay" %>
+  <% end %>
+</div>
