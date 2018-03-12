@@ -10,4 +10,3 @@ class Vine < ApplicationRecord
   validates :location, presence: true
   validates :picture, presence: true
 end
-@

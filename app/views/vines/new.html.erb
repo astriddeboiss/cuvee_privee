@@ -1,2 +1,10 @@
-<h1>Vines#new</h1>
-<p>Find me in app/views/vines/new.html.erb</p>
+<h1>Create a new vine</h1>
+<%= simple_form_for @vine do |f|%>
+<%= f.input :name %>
+<%= f.input :description %>
+<%= f.input :price %>
+<%= f.input :picture %>
+<%= f.input :location %>
+<%= f.input :variety %>
+<%= f.submit "Submit" %>
+<% end %>
