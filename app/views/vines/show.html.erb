@@ -1,5 +1,3 @@
-require_relative '../../models/booking.rb'
-
 <h1><%= @vine.name %></h1>
 <div>
   <ul>
@@ -12,8 +10,7 @@ require_relative '../../models/booking.rb'
 </div>
 
 <div>
-  <% @booking = Booking.new %>
-  <%= simple_form_for @booking do |f|%>
+  <%= simple_form_for([@vine, @booking], method: "post") do |f|%>
   <%= f.input :start_at %>
   <%= f.submit "Adopt this wine and pay" %>
   <% end %>

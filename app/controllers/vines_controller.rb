@@ -7,6 +7,7 @@ class VinesController < ApplicationController
 
   def show
     @vine = Vine.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
