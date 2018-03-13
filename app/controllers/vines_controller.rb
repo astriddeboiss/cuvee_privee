@@ -19,8 +19,7 @@ class VinesController < ApplicationController
   def create
     @vine = Vine.new(vine_params)
     @vine.user = current_user
-    @vine.save
-    if @vine.valid?
+    if @vine.save
       redirect_to vine_path(@vine)
     else
       render :new
@@ -28,8 +27,8 @@ class VinesController < ApplicationController
   end
 
   private
+
   def vine_params
     params.require(:vine).permit(:name, :description, :picture, :price, :location, :variety)
   end
-
 end
