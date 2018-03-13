@@ -6,6 +6,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.vine = Vine.find(params[:vine_id])
     @booking.user = current_user
+    authorize @booking
     if @booking.save
       flash[:notice] = "Le vigneron va confirmer votre demande"
       @booking.status = "En attente"
