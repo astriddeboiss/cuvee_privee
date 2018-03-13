@@ -31,4 +31,5 @@ class VinesController < ApplicationController
   def vine_params
     params.require(:vine).permit(:name, :description, :picture, :price, :location, :variety)
   end
+
 end
