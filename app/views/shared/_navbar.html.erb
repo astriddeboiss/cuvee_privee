@@ -16,14 +16,17 @@
   </div>
 
 <% else %>
-<!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
-    <%= image_tag "logo_cp.png", class: "navbar-logo" %>
-  </a>
+  <div class="navbar-wagon">
+  <!-- Logo -->
+    <a href="/" class="navbar-wagon-brand">
+      <%= image_tag "logo_cp.png", class: "navbar-logo" %>
+    </a>
 
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
-    <%= link_to "Proposer des Vignes", new_vine_path, :class =>"navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "Tableau de bord", dashboard_path, :class =>"navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "Déconnection", destroy_user_session_path, :method => :delete, :class =>"navbar-wagon-item navbar-wagon-link" %>
+    <div class="navbar-wagon-right hidden-xs hidden-sm">
+      <%= link_to "Proposer des Vignes", new_vine_path, :class =>"navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Tableau de bord", dashboard_path, :class =>"navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Déconnection", destroy_user_session_path, :method => :delete, :class =>"navbar-wagon-item navbar-wagon-link" %>
+    </div>
   </div>
 <% end %>
+
