@@ -1,0 +1,11 @@
+<h1>Create a new vine</h1>
+<%= simple_form_for @vine do |f|%>
+<%= f.input :name %>
+<%= f.input :description %>
+<%= f.input :price %>
+<%= f.input :picture %>
+<%= f.input :picture_cache, as: :hidden %>
+<%= f.input :location %>
+<%= f.input :variety %>
+<%= f.submit "Submit" %>
+<% end %>

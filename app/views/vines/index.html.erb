@@ -1,0 +1,17 @@
+<h1>Our vines</h1>
+
+<% @vines.each do |vine|%>
+  <%= link_to vine_path(vine) do %>
+  <div class="card">
+    <ul>
+      <li><%= vine.name %></li>
+      <li><%= vine.picture %></li>
+      <li><%= vine.location %></li>
+      <li><%= vine.variety %></li>
+      <li><%= vine.description %></li>
+      <li><%= vine.price %></li>
+      <li><%= cl_image_tag vine.picture, height: 300, width: 400, crop: :fill %></li>
+    </ul>
+  </div>
+  <% end %>
+<% end %>
