@@ -9,16 +9,19 @@ class VinesController < ApplicationController
 
   def show
     @vine = Vine.find(params[:id])
+    authorize @vine
     @booking = Booking.new
   end
 
   def new
     @vine = Vine.new
+    authorize @vine
   end
 
   def create
     @vine = Vine.new(vine_params)
     @vine.user = current_user
+    authorize @vine
     if @vine.save
       redirect_to vine_path(@vine)
     else

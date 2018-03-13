@@ -1,3 +1,6 @@
+<% if policy(Vine).create? %>
+  <%= new_vine_path %>
+<% end %>
 <div>
   <div class = "formulaire">
       <div class="container">
