@@ -1,2 +1,16 @@
-<h1>Vines#index</h1>
-<p>Find me in app/views/vines/index.html.erb</p>
+<h1>Our vines</h1>
+
+<% @vines.each do |vine|%>
+  <%= link_to vine_path(vine) do %>
+  <div class="card">
+    <ul>
+      <li><%= vine.name %></li>
+      <li><%= vine.picture %></li>
+      <li><%= vine.location %></li>
+      <li><%= vine.variety %></li>
+      <li><%= vine.description %></li>
+      <li><%= vine.price %></li>
+    </ul>
+  </div>
+  <% end %>
+<% end %>
