@@ -8,7 +8,6 @@ class UsersController < ApplicationController
   end
 
   def dashboard
-    @user = current_user
     @bookings = current_user.bookings
   end
 end
