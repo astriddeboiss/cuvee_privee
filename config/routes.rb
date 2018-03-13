@@ -1,19 +1,4 @@
 Rails.application.routes.draw do
-  get 'booking/index'
-
-  get 'booking/create'
-
-  get 'users/new'
-
-  get 'users/create'
-
-  get 'vines/index'
-
-  get 'vines/show'
-
-  get 'vines/new'
-
-  get 'vines/create'
 
   devise_for :users
   root to: 'pages#home'
