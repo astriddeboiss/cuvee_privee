@@ -13,7 +13,7 @@
   <body>
 
     <%= render 'shared/flashes' %>
-  
+
 
     <% if user_signed_in? %>
     <%= render 'shared/navbar_signed_in' %>
@@ -24,5 +24,7 @@
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js" %>
+
   </body>
 </html>

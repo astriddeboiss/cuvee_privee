@@ -5,7 +5,7 @@
   <div class="wrapper-cards">
 
 <% @vines.each do |vine|%>
-  
+
     <div class="card">
       <div class="avatar" style="background-image: url('https://source.unsplash.com/5jDJ4LaXiWE/50x50');"></div>
       <div class="card-banner" style="background-image: url('https://source.unsplash.com/QTgOjDCiJEo');"></div>
@@ -18,4 +18,13 @@
 <% end %>
 
 </div>
+
+<div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+></div>
+
+
 </div>

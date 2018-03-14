@@ -4,7 +4,15 @@ class VinesController < ApplicationController
 
 
   def index
-    @vines = Vine.all
+    @vines = Vine.where.not(latitude: nil, longitude: nil)
+    @markers = @vines.map do |vine|
+      {
+        lat: vine.latitude,
+        lng: vine.longitude
+      }
+    end
+  end
+end
   end
 
   def show
