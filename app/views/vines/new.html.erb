@@ -1,4 +1,7 @@
 <h1>Create a new vine</h1>
+<% if policy(Vine).create? %>
+  <%= new_vine_path %>
+<% end %>
 <%= simple_form_for @vine do |f|%>
 <%= f.input :name %>
 <%= f.input :description %>

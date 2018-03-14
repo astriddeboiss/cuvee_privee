@@ -1,16 +1,42 @@
 <h1>My dashboard</h1>
 <div class="container">
-  <div class="wrapper_one">
-    <h2>Notifications</h2>
-  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="wrapper_one">
+        <h2>Mes pieds de vigne crées</h2>
+        <% @vines.each do |vine| %>
+        <div class="card_booking">
+          <%=vine.name %> : <%=vine.description %>
+          <ul>
+            <% vine.bookings.each do |booking| %>
+              <li> Commande de <%=booking.user.first_name %><%=booking.user.last_name %> <%= booking.status %>
+                <%= simple_form_for(booking) do |f| %>
+                  <!-- TODO  add hidden field with status value-->
+                  <%= f.input :status, as: :hidden, input_html: { value: "Accepté" } %>
+                  <%= f.submit "Accepter", class: "btn btn-primary" %>
+                <% end %>
+                <%= simple_form_for(booking) do |f| %>
+                  <!-- TODO  add hidden field with status value-->
+                  <%= f.input :status, as: :hidden, input_html: { value: "Refusé" } %>
+                  <%= f.submit "Refuser", class: "btn btn-primary" %>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+        <% end %>
+      </div>
+    </div>
 
 
-  <div class="wrapper_two">
-    <h2>Mes pieds de vigne</h2>
-    <p>Les pieds de vigne que j'ai booké</p>
-    <ul> <% @bookings.each do |booking| %>
-      <li><%=booking.vine.name %> : <%=booking.status %> </li>
-      <% end %>
-    </ul>
+    <div class="col-sm-6">
+      <div class="wrapper_two">
+        <h2>Mes demandes </h2>
+        <ul> <% @bookings_client.each do |booking| %>
+          <li><%=booking.vine.name %> : <%=booking.status %> </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
