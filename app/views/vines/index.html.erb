@@ -5,17 +5,18 @@
   <div class="wrapper-cards">
 
 <% @vines.each do |vine|%>
+  <% photo_path = cl_image_path vine.picture, height: 300, width: 400, crop: :fill%>
 
-    <div class="card">
-      <div class="avatar" style="background-image: url('https://source.unsplash.com/5jDJ4LaXiWE/50x50');"></div>
-      <div class="card-banner" style="background-image: cl_image_tag(vine.picture,
-      width: 400, height: 300, crop: :fill)"></div>
-      <ul class="item-description">
-        <li id="wine-type"><span id="color"></span> <%= vine.variety %><span id="dot">  ·  </span> <%= vine.location %></li>
-        <li id="card-title"> <%= vine.name %></li>
-        <li id="price"> <%= vine.price %></li>
-      </ul>
-    </div>
+
+  <div class="card">
+    <div class="avatar" style="background-image: url('https://source.unsplash.com/5jDJ4LaXiWE/50x50');"></div>
+    <div class="card-banner" style="background-image: url('<%= photo_path %>');"></div>
+    <ul class="item-description">
+      <li id="wine-type"><span id="color"></span> <%= vine.variety %><span id="dot">  ·  </span> <%= vine.location %></li>
+      <li id="card-title"> <%= vine.name %></li>
+      <li id="price"> <%= vine.price %></li>
+    </ul>
+  </div>
 <% end %>
 
 </div>
