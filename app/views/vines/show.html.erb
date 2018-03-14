@@ -1,7 +1,6 @@
 <h1><%= @vine.name %></h1>
 <div>
   <ul>
-    <li><%= @vine.picture %></li>
     <li><%= @vine.location %></li>
     <li><%= @vine.variety %></li>
     <li><%= @vine.description %></li>
@@ -12,8 +11,10 @@
 <div>
   <%= simple_form_for([@vine, @booking], method: "post") do |f|%>
   <%= f.input :start_at %>
-  <%= f.submit "Adopt this wine and pay" %>
+  <%= f.submit "Adopt this wine and pay"%>
   <% end %>
 </div>
+
+<%= cl_image_tag @vine.picture, height: 300, width: 400, crop: :fill %>
 
 <%= link_to "Back to all vines", vines_path%>

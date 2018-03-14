@@ -31,6 +31,11 @@
   font-weight: 700;
 }
 
+.navbar-wagon-right-signed-in {
+  font-family: $headers-font;
+  font-weight: 700;
+}
+
 /* Basic navbar item */
 .navbar-wagon-item {
   cursor: pointer;
@@ -47,3 +52,7 @@
   text-decoration: none;
 }
 
+.avatar-navbar {
+  border-radius: 50%;
+  height: 35px;
+}
