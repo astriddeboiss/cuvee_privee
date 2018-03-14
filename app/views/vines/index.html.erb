@@ -10,6 +10,7 @@
       <li><%= vine.variety %></li>
       <li><%= vine.description %></li>
       <li><%= vine.price %></li>
+      <li><%= cl_image_tag vine.picture, height: 300, width: 400, crop: :fill %></li>
     </ul>
   </div>
   <% end %>
