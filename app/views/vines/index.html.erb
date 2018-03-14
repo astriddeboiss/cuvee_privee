@@ -6,10 +6,11 @@
 
 <% @vines.each do |vine|%>
   <% photo_path = cl_image_path vine.picture, height: 300, width: 400, crop: :fill%>
+  <% profile_pic_path = cl_image_path User.find(Vine[:user_id]).picture, height: 45, width: 45, crop: :fill%>
 
 
   <div class="card">
-    <div class="avatar" style="background-image: url('https://source.unsplash.com/5jDJ4LaXiWE/50x50');"></div>
+    <div class="avatar" style="background-image: url('<%= profile_pic_path %>');"></div>
     <div class="card-banner" style="background-image: url('<%= photo_path %>');"></div>
     <ul class="item-description">
       <li id="wine-type"><span id="color"></span> <%= vine.variety %><span id="dot">  ·  </span> <%= vine.location %></li>
