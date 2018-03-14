@@ -9,4 +9,5 @@ class Vine < ApplicationRecord
   validates :price, presence: true
   validates :location, presence: true
   validates :picture, presence: true
+  mount_uploader :picture, PhotoUploader
 end

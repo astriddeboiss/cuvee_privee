@@ -1,0 +1,16 @@
+<h1>My dashboard</h1>
+<div class="container">
+  <div class="wrapper_one">
+    <h2>Notifications</h2>
+  </div>
+
+
+  <div class="wrapper_two">
+    <h2>Mes pieds de vigne</h2>
+    <p>Les pieds de vigne que j'ai booké</p>
+    <ul> <% @bookings.each do |booking| %>
+      <li><%=booking.vine.name %> : <%=booking.status %> </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
