@@ -1,20 +1,24 @@
-<h1><%= @vine.name %></h1>
-<div>
-  <ul>
-    <li><%= @vine.location %></li>
-    <li><%= @vine.variety %></li>
-    <li><%= @vine.description %></li>
-    <li><%= @vine.price %></li>
-  </ul>
+<div class="banner-show" style="background-image: url(<%= cl_image_path @vine.picture, height: 200, width: 1200, crop: :fit %>); ">
+
 </div>
 
-<div>
-  <%= simple_form_for([@vine, @booking], method: "post") do |f|%>
-  <%= f.input :start_at %>
-  <%= f.submit "Adopt this wine and pay"%>
-  <% end %>
+<div class="container">
+  <h1><%= @vine.name %></h1>
+  <div>
+    <ul>
+      <li><%= @vine.location %></li>
+      <li><%= @vine.variety %></li>
+      <li><%= @vine.description %></li>
+      <li><%= @vine.price %></li>
+    </ul>
+  </div>
+
+  <div>
+    <%= simple_form_for([@vine, @booking], method: "post") do |f|%>
+    <%= f.input :start_at %>
+    <%= f.submit "Adopt this wine and pay"%>
+    <% end %>
+  </div>
+  <%= link_to "Back to all vines", vines_path%>
 </div>
 
-<%= cl_image_tag @vine.picture, height: 300, width: 400, crop: :fill %>
-
-<%= link_to "Back to all vines", vines_path%>
