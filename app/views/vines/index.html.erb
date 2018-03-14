@@ -6,7 +6,7 @@
 
 <% @vines.each do |vine|%>
   <% photo_path = cl_image_path vine.picture, height: 300, width: 400, crop: :fill%>
-  <% profile_pic_path = cl_image_path User.find(Vine[:user_id]).picture, height: 45, width: 45, crop: :fill%>
+  <% profile_pic_path = cl_image_path User.last.picture, height: 45, width: 45, crop: :fill%>
 
 
   <div class="card">
