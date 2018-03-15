@@ -1,7 +1,9 @@
 Arguments: 
-  /usr/local/Cellar/node/9.8.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js check --integrity
+  /usr/local/Cellar/node/9.8.0/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js check --integrity
 
 PATH: 
+/Users/astriddeboissieu/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/bin:/Users/astriddeboissieu/.rbenv/versions/2.4.3/bin:/usr/local/Cellar/rbenv/1.1.1/libexec:./bin:./node_modules/.bin:/Users/astriddeboissieu/.rbenv/shims:/Users/astriddeboissieu/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
+
 /Users/ballouch/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/bin:/Users/ballouch/.rbenv/versions/2.4.3/bin:/usr/local/Cellar/rbenv/1.1.1/libexec:./bin:./node_modules/.bin:/Users/ballouch/.rbenv/shims:/Users/ballouch/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/bin/jamf:/usr/local/sbin
 
 
@@ -6110,9 +6112,9 @@ Lockfile:
 
 Trace: 
   Error: Found 1 errors.
-      at new MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
-      at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:59470:13
+      at new MessageError (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:186:110)
+      at /usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:59470:13
       at Generator.next (<anonymous>)
-      at step (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:98:30)
-      at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:109:13
+      at step (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:98:30)
+      at /usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:109:13
       at <anonymous>
