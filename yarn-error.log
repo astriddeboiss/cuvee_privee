@@ -1,8 +1,18 @@
 Arguments: 
+
   /usr/local/Cellar/node/9.8.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js check --integrity
 
 PATH: 
   /Users/ballouch/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/bin:/Users/ballouch/.rbenv/versions/2.4.3/bin:/usr/local/Cellar/rbenv/1.1.1/libexec:./bin:./node_modules/.bin:/Users/ballouch/.rbenv/shims:/Users/ballouch/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/bin/jamf:/usr/local/sbin
+
+  /usr/local/Cellar/node/9.8.0/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js check --integrity
+
+PATH: 
+/Users/astriddeboissieu/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/bin:/Users/astriddeboissieu/.rbenv/versions/2.4.3/bin:/usr/local/Cellar/rbenv/1.1.1/libexec:./bin:./node_modules/.bin:/Users/astriddeboissieu/.rbenv/shims:/Users/astriddeboissieu/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
+
+/Users/ballouch/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/bin:/Users/ballouch/.rbenv/versions/2.4.3/bin:/usr/local/Cellar/rbenv/1.1.1/libexec:./bin:./node_modules/.bin:/Users/ballouch/.rbenv/shims:/Users/ballouch/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/bin/jamf:/usr/local/sbin
+
+
 
 Yarn version: 
   1.5.1
@@ -20,6 +30,11 @@ npm manifest:
     "dependencies": {
       "@rails/webpacker": "^3.3.0",
       "bootstrap": "3",
+
+
+      "gmaps": "^0.4.24",
+
+
       "jquery": "^3.3.1"
     },
     "devDependencies": {
@@ -2458,6 +2473,13 @@ Lockfile:
       lodash "~4.17.4"
       minimatch "~3.0.2"
   
+
+  gmaps@^0.4.24:
+    version "0.4.24"
+    resolved "https://registry.yarnpkg.com/gmaps/-/gmaps-0.4.24.tgz#07f22f0cfc3e4e32498950ffafd7ca635ffc100c"
+  
+
+
   graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
     version "4.1.11"
     resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
@@ -6100,9 +6122,13 @@ Lockfile:
 
 Trace: 
   Error: Found 1 errors.
+
       at new MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
       at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:59470:13
       at Generator.next (<anonymous>)
       at step (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:98:30)
       at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:109:13
+
+    
+
       at <anonymous>
