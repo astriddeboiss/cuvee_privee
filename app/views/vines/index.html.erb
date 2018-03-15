@@ -5,8 +5,7 @@
   <div class="wrapper-cards">
 
 <% @vines.each do |vine|%>
-
-  <%= link_to vine_path(vine) do %>
+  <% photo_path = cl_image_path vine.picture, height: 300, width: 400, crop: :fill%>
     <div class="card">
       <% if vine.user.picture.present? %>
         <% profile_pic_path = cl_image_path vine.user.picture, height: 45, width: 45, crop: :fill%>
@@ -20,9 +19,9 @@
         <li id="card-title"> <%= vine.name %></li>
         <li id="price"> <%= vine.price %></li>
       </ul>
+      <%= link_to "", vine_path(vine), class: "card-link" %>
     </div>
   <% end %>
-<% end %>
 
 </div>
 

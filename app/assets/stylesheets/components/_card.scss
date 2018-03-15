@@ -7,7 +7,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .container h1 {
@@ -30,6 +30,7 @@
 
 .card:hover {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  text-decoration: none;
 }
 
 .avatar {
@@ -94,3 +95,15 @@ li#card-title {
   font-size: 15px;
 
 }
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+
