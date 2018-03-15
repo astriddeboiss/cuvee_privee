@@ -1,6 +1,15 @@
-<h1>Nos vignes</h1>
+
 <div class="product-list">
 
+
+<div class="container">
+  <%= form_tag(vines_path, :id => "index-search", :method => :get) do %>
+    <%= select_tag( :price, options_for_select(Vine.prices, selected: params[:price]))%>
+    <%= select_tag( :variety, options_for_select(Vine.varieties, selected: params[:variety]), id: "variety-tag" )%>
+  <% end %>
+
+
+  <h1>Nos vignes</h1>
 
   <div class="wrapper-cards">
   <% @vines.each do |vine|%>
@@ -12,9 +21,16 @@
       <% end %>
       <% photo_path = cl_image_path vine.picture, height: 300, width: 400, crop: :fill%>
       <div class="card-banner" style="background-image: url('<%= photo_path %>');"></div>
-
       <ul class="item-description">
-        <li id="wine-type"><span id="color"></span> <%= vine.variety %><span id="dot">  ·  </span> <%= vine.location %></li>
+
+        <% if vine.color == "Rouge" %>
+        <li id="wine-type"><span id="color-red"></span> <%= vine.variety %><span id="dot">  ·  </span> <%= vine.location %></li>
+        <% elsif vine.color == "Blanc" %>
+        <li id="wine-type"><span id="color-white"></span> <%= vine.variety %><span id="dot">  ·  </span> <%= vine.location %></li>
+        <% else %>
+        <li id="wine-type"><span id="color-rose"></span> <%= vine.variety %><span id="dot">  ·  </span> <%= vine.location %></li>
+        <% end %>
+
         <li id="card-title"> <%= vine.name %></li>
         <li id="price"> <%= vine.price %></li>
       </ul>
