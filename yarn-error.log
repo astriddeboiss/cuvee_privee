@@ -2,7 +2,14 @@ Arguments:
   /usr/local/Cellar/node/9.8.0/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js check --integrity
 
 PATH: 
+<<<<<<< HEAD
   /Users/astriddeboissieu/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/bin:/Users/astriddeboissieu/.rbenv/versions/2.4.3/bin:/usr/local/Cellar/rbenv/1.1.1/libexec:./bin:./node_modules/.bin:/Users/astriddeboissieu/.rbenv/shims:/Users/astriddeboissieu/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
+=======
+/Users/astriddeboissieu/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/bin:/Users/astriddeboissieu/.rbenv/versions/2.4.3/bin:/usr/local/Cellar/rbenv/1.1.1/libexec:./bin:./node_modules/.bin:/Users/astriddeboissieu/.rbenv/shims:/Users/astriddeboissieu/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
+
+/Users/ballouch/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/bin:/Users/ballouch/.rbenv/versions/2.4.3/bin:/usr/local/Cellar/rbenv/1.1.1/libexec:./bin:./node_modules/.bin:/Users/ballouch/.rbenv/shims:/Users/ballouch/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/bin/jamf:/usr/local/sbin
+
+>>>>>>> f4703a71e37ae9f96ddce0b4ed065f3e822f0544
 
 Yarn version: 
   1.5.1
