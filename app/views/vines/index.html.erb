@@ -5,19 +5,17 @@
   <div class="wrapper-cards">
 
 <% @vines.each do |vine|%>
-  <% photo_path = cl_image_path vine.picture, height: 300, width: 400, crop: :fill%>
-  <% if vine.user.picture %>
-    <% profile_pic_path = cl_image_path vine.user.picture, height: 300, width: 400, crop: :fill%>
-  <% else %>
-    <% profile_pic_path = photo_path %>
-  <% end %>
 
   <%= link_to vine_path(vine) do %>
 
     <div class="card">
-      <div class="avatar" style="background-image: url('<%= profile_pic_path %>');"></div>
-        <div class="card-banner" style="background-image: url('<%= photo_path %>');"></div>
+      <% if vine.user.picture.present? %>
+        <% profile_pic_path = cl_image_path vine.user.picture, height: 45, width: 45, crop: :fill%>
+        <div class="avatar" style="background-image: url('<%= profile_pic_path %>');"></div>
       <% end %>
+      <% photo_path = cl_image_path vine.picture, height: 300, width: 400, crop: :fill%>
+      <div class="card-banner" style="background-image: url('<%= photo_path %>');"></div>
+
       <ul class="item-description">
         <li id="wine-type"><span id="color"></span> <%= vine.variety %><span id="dot">  ·  </span> <%= vine.location %></li>
         <li id="card-title"> <%= vine.name %></li>
