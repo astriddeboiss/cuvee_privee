@@ -7,8 +7,8 @@
     <div class="navbar-wagon-right-signed-in hidden-xs hidden-sm">
       <%= link_to "Proposer des Vignes", new_vine_path, :class =>"navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Déconnexion", destroy_user_session_path, :method => :delete, :class =>"navbar-wagon-item navbar-wagon-link" %>
-      <% profile_pic_path = cl_image_path current_user.picture, height: 35, width: 35, crop: :fill%>
-      <img class="avatar-navbar" style="background-image: url('<%= profile_pic_path %>');"></img>
+      <% profile_pic_path = current_user.picture.url.nil? ? "http://kitt.lewagon.com/placeholder/users/Gumbet" : cl_image_path(current_user.picture, height: 35, width: 35, crop: :fill) %>
+        <%= image_tag profile_pic_path, class: "avatar-navbar" %>
     </div>
 </div>
 
