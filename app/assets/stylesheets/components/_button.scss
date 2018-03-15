@@ -18,6 +18,12 @@
   margin: 1px;
 }
 
+.btn-primary:active {
+  background-color: rgb(123,4,57) !important;
+  border: 2px solid rgb(123,4,57) !important;
+  margin: 1px !important;
+}
+
 .btn-width {
   width: 100%;
 }
