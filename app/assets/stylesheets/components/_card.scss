@@ -68,8 +68,28 @@ ul.item-description {
   font-weight: 700;
 }
 
-#color {
-  background-color: #970747;
+#color-red {
+  background-color: #ed3436;
+  height: 10px;
+  width: 10px;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#color-white {
+  background-color: #ece161;
+  height: 10px;
+  width: 10px;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#color-rose {
+  background-color: #fc7b7f;
   height: 10px;
   width: 10px;
   text-align: center;
