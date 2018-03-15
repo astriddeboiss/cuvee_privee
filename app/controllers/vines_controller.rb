@@ -2,9 +2,14 @@ class VinesController < ApplicationController
 
   skip_before_action :authenticate_user!, only:[:index, :show]
 
-
   def index
-    @vines = Vine.all
+    @vines = Vine.where.not(latitude: nil, longitude: nil)
+    @markers = @vines.map do |vine|
+      {
+        lat: vine.latitude,
+        lng: vine.longitude
+      }
+    end
   end
 
   def show

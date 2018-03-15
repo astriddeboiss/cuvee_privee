@@ -8,4 +8,6 @@ class Vine < ApplicationRecord
   validates :location, presence: true
   validates :picture, presence: true
   mount_uploader :picture, PhotoUploader
+  geocoded_by :location
+  after_validation :geocode
 end
