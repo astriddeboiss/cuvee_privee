@@ -11,7 +11,8 @@ class VinesController < ApplicationController
     @markers = @vines.map do |vine|
       {
         lat: vine.latitude,
-        lng: vine.longitude
+        lng: vine.longitude,
+        infoWindow: { content: render_to_string(partial: "/vines/map_box", locals: { vine: vine }) }
       }
     end
   end

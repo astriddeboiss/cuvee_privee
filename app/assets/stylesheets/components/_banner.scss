@@ -36,9 +36,32 @@
   opacity: 0.90;
 }
 
-.form-inline .form-group {
-  margin: 0px 2px;
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.form_box {
+  background-color: rgba(255, 255, 255, 1);
+  width : 450px;
+  border-radius: 5px;
+}
+
+.form {
+  color: black;
+  margin-left : 25px;
+  margin-right : 25px;
+}
+
+.form h1 {
+  font-size: 50px;
 }
 
 
-
+#new_vine {
+  border-radius: 5px;
+  border-color: #76B39D;
+}

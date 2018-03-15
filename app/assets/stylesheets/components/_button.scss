@@ -18,12 +18,15 @@
   margin: 1px;
 }
 
-.btn-primary:hover {
-  background-color: #76B39D;
-  border: 2px solid #76B39D;
-  opacity: 0.8;
-}
-
 .btn-width {
   width: 100%;
+}
+
+.boutton_de_l_espace {
+  color: white;
+  background-color : #76B39D;
+  width: 100%;
+  margin-bottom: 25px;
+  height: 50px;
+  border-radius: 5px;
 }

@@ -1,4 +1,7 @@
 
+<div class="product-list">
+
+
 <div class="container">
   <%= form_tag(vines_path, :id => "index-search", :method => :get) do %>
     <%= select_tag( :price, options_for_select(Vine.prices, selected: params[:price]))%>
@@ -7,10 +10,10 @@
 
 
   <h1>Nos vignes</h1>
-  <div class="wrapper-cards">
 
-<% @vines.each do |vine|%>
-  <% photo_path = cl_image_path vine.picture, height: 300, width: 400, crop: :fill%>
+  <div class="wrapper-cards">
+  <% @vines.each do |vine|%>
+    <% photo_path = cl_image_path vine.picture, height: 300, width: 400, crop: :fill%>
     <div class="card">
       <% if vine.user.picture.present? %>
         <% profile_pic_path = cl_image_path vine.user.picture, height: 45, width: 45, crop: :fill%>
@@ -35,14 +38,11 @@
     </div>
   <% end %>
 </div>
-
-<div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
+<div class= "map-container">
+<div id="map"
   data-markers="<%= @markers.to_json %>"
 ></div>
-
+</div>
 
 </div>
 
