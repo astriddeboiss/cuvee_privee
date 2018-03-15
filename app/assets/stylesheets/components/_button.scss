@@ -1,5 +1,19 @@
 .btn-primary {
-  background-color: #76B39D;
-  border: 2px solid #76B39D;
+  background-color: rgb(154,6,72);
+  border: 2px solid rgb(154,6,72);
+  margin: 1px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: $headers-font;
+  width: 200px;
+}
+
+.btn.btn-primary {
+  border-radius: 20px;
+}
+
+.btn-primary:hover {
+  background-color: rgb(123,4,57);
+  border: 2px solid rgb(123,4,57);
   margin: 1px;
 }
