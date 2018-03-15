@@ -1,11 +1,10 @@
+<h1>Nos vignes</h1>
+<div class="product-list">
 
 
-<div class="container">
-  <h1>Nos vignes</h1>
   <div class="wrapper-cards">
-
-<% @vines.each do |vine|%>
-  <% photo_path = cl_image_path vine.picture, height: 300, width: 400, crop: :fill%>
+  <% @vines.each do |vine|%>
+    <% photo_path = cl_image_path vine.picture, height: 300, width: 400, crop: :fill%>
     <div class="card">
       <% if vine.user.picture.present? %>
         <% profile_pic_path = cl_image_path vine.user.picture, height: 45, width: 45, crop: :fill%>
@@ -22,16 +21,12 @@
       <%= link_to "", vine_path(vine), class: "card-link" %>
     </div>
   <% end %>
-
 </div>
-
-<div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
+<div class= "map-container">
+<div id="map"
   data-markers="<%= @markers.to_json %>"
 ></div>
-
+</div>
 
 </div>
 
