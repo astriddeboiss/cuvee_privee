@@ -1,20 +1,35 @@
-<h1><%= @vine.name %></h1>
-<div>
-  <ul>
-    <li><%= @vine.location %></li>
-    <li><%= @vine.variety %></li>
-    <li><%= @vine.description %></li>
-    <li><%= @vine.price %></li>
-  </ul>
+<div class="title">
+  <h1><%= @vine.name %></h1>
+</div>
+<div class="container-show">
+  <div class="background">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card-show">
+          <%= cl_image_tag @vine.picture, height: 300, width: 400, crop: :fill %>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="form-booking">
+          <div>
+            <ul>
+              <li><%= @vine.location %></li>
+              <li><%= @vine.variety %></li>
+              <li><%= @vine.description %></li>
+              <li><%= @vine.price %></li>
+            </ul>
+          </div>
+          <%= simple_form_for([@vine, @booking], method: "post") do |f|%>
+          <%= f.input :start_at, label: "Date de début"%>
+          <%= f.submit "Adopter cette vigne et payer", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <%= link_to "Retour à la liste des vignes", vines_path%>
+    </div>
+  </div>
 </div>
 
-<div>
-  <%= simple_form_for([@vine, @booking], method: "post") do |f|%>
-  <%= f.input :start_at %>
-  <%= f.submit "Adopt this wine and pay"%>
-  <% end %>
-</div>
-
-<%= cl_image_tag @vine.picture, height: 300, width: 400, crop: :fill %>
-
-<%= link_to "Back to all vines", vines_path%>
