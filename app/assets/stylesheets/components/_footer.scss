@@ -1,0 +1,72 @@
+.footer {
+  background: #ececeb;
+  display: flex;
+  align-items: center;
+  height: 200px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+  flex-direction: column;
+  justify-content: center;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+  padding-bottom: 25px;
+}
+.footer-links a {
+  color: #3772FF;
+  opacity: 0.8;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 20px;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+}
+
+.description {
+  padding-bottom: 25px;
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-items: space-between;
+}
+
+.description p {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  color: #3772FF;
+}
+
+.description a {
+  color: #3772FF;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.description a:hover {
+  color: #3772FF;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.adresse-footer {
+  padding-bottom: 6px;
+  font-size: 13px;
+  color: #3772FF;
+  opacity: 0.8;
+}
+
+.email-footer {
+  padding-bottom: 6px;
+  margin-bottom: 9px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #3772FF;
+  opacity: 0.8;
+}
