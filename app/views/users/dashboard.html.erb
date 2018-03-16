@@ -1,42 +1,35 @@
-<h1>My dashboard</h1>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="wrapper_one">
-        <h2>Mes pieds de vigne crées</h2>
-        <% @vines.each do |vine| %>
-        <div class="card_booking">
-          <%=vine.name %> : <%=vine.description %>
-          <ul>
-            <% vine.bookings.each do |booking| %>
-              <li> Commande de <%=booking.user.first_name %><%=booking.user.last_name %> <%= booking.status %>
-                <%= simple_form_for(booking) do |f| %>
-                  <!-- TODO  add hidden field with status value-->
-                  <%= f.input :status, as: :hidden, input_html: { value: "Accepté" } %>
-                  <%= f.submit "Accepter", class: "btn btn-primary" %>
-                <% end %>
-                <%= simple_form_for(booking) do |f| %>
-                  <!-- TODO  add hidden field with status value-->
-                  <%= f.input :status, as: :hidden, input_html: { value: "Refusé" } %>
-                  <%= f.submit "Refuser", class: "btn btn-primary" %>
-                <% end %>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-        <% end %>
-      </div>
-    </div>
-
-
-    <div class="col-sm-6">
-      <div class="wrapper_two">
-        <h2>Mes demandes </h2>
-        <ul> <% @bookings_client.each do |booking| %>
-          <li><%=booking.vine.name %> : <%=booking.status %> </li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-  </div>
+<div class="tabs">
+  <a href="#" class="tab active">Mes vignes</a>
+  <a href="#" class="tab">Mes réservations</a>
 </div>
+
+
+
+
+
+<ul class="demandes">
+  <% @vines.each do |vine| %>
+    <% vine.bookings.each do |booking| %>
+      <li class="message">
+        <img class="profile-pic" src="images/gab.png" alt="">
+        <p class="user_name"> <strong><%=booking.user.first_name.capitalize %> <%=booking.user.last_name.capitalize %></strong> <br> <%=booking.start_at %></p></strong></p>
+        <p class="vine_name"><strong><%= vine.name %></strong> : <%= booking.status %> <br> <%= vine.description %> </p>
+        <div class="prix">
+          <%= simple_form_for(booking) do |f| %>
+            <%= f.input :status, as: :hidden, input_html: { value: "Accepté" } %>
+            <%= f.submit "Accepter", class: "btn btn-primary" %>
+          <% end %>
+          <%= simple_form_for(booking) do |f| %>
+            <%= f.input :status, as: :hidden, input_html: { value: "Refusé" } %>
+            <%= f.submit "Refuser", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+
+
+
+
+
