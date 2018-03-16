@@ -11,17 +11,29 @@
   <% @vines.each do |vine| %>
     <% vine.bookings.each do |booking| %>
       <li class="message">
-        <img class="profile-pic" src="images/gab.png" alt="">
-        <p class="user_name"> <strong><%=booking.user.first_name %> <%=booking.user.last_name %></strong> <br> <%=booking.start_at %></p></strong></p>
-        <p class="vine_name"><strong><%= vine.name %></strong> : <%= booking.status %> <br> <%= vine.description %> </p>
-        <div class="prix">
-          <%= simple_form_for(booking) do |f| %>
-            <%= f.input :status, as: :hidden, input_html: { value: "Accepté" } %>
-            <%= f.submit "Accepter", class: "btn btn-primary" %>
+        <% profile_pic_path = cl_image_path(booking.user.picture, height: 35, width: 35, crop: :fill) %>
+        <%= image_tag profile_pic_path, class: "avatar-navbar" %>
+        <img class="profile-pic" src="images/gab.png" alt=""
+
+        <p class="user-name"> <strong><%=booking.user.first_name.capitalize %> <%=booking.user.last_name.capitalize %></strong> <br> <%=booking.start_at %></p></strong></p>
+        <% if booking.status == "En attente" %>
+          <p class="vine-name"><strong><%= vine.name %></strong> : <%= booking.status %> <br> <%= vine.description %> </p>
+        <% elsif booking.status == "Accepté" %>
+          <p class="vine-name-accepted"><strong><%= vine.name %></strong> : <%= booking.status %> <br> <%= vine.description %> </p>
+        <% else %>
+          <p class="vine-name-declined"><strong><%= vine.name %></strong> : <%= booking.status %> <br> <%= vine.description %> </p>
           <% end %>
-          <%= simple_form_for(booking) do |f| %>
-            <%= f.input :status, as: :hidden, input_html: { value: "Refusé" } %>
-            <%= f.submit "Refuser", class: "btn btn-primary" %>
+
+        <div class="prix">
+          <% if booking.status == "En attente" %>
+            <%= simple_form_for(booking) do |f| %>
+              <%= f.input :status, as: :hidden, input_html: { value: "Accepté" } %>
+              <%= f.submit "Accepter", class: "btn btn-primary" %>
+            <% end %>
+            <%= simple_form_for(booking) do |f| %>
+              <%= f.input :status, as: :hidden, input_html: { value: "Refusé" } %>
+              <%= f.submit "Refuser", class: "btn btn-primary" %>
+            <% end %>
           <% end %>
         </div>
       </li>

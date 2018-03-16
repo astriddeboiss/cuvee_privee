@@ -8,18 +8,6 @@ body {
   font-size: 15px;
 }
 
-p {
-  line-height: 25px;
-}
-
-.text-center {
-  text-align: center;
-}
-.container {
-  max-width: 900px;
-  margin: 50px auto;
-}
-
 .inbox {
   border: 1px solid rgba(0,0,0,.2);
   padding: 10px;
@@ -63,7 +51,11 @@ p {
 
 .tabs {
   display: flex;
+}
 
+a.tabs {
+  display: flex;
+  text-decoration: none;
 }
 
 .mes_vignes {
@@ -77,16 +69,30 @@ p {
 /* Your avatar CSS code here */
 .profile-pic {
   border-radius: 50%;
+  width: 15%;
+}
+
+p.user-name {
   width: 25%;
 }
 
-p.user_name {
-  width: 25%;
+
+.vine-name {
+ width: 45%
+
+
 }
 
-.vine_name {
- width: 25%
+.vine-name-accepted {
+ width: 45%;
+ color: #5AB498;
 }
+
+.vine-name-declined {
+ width: 45%;
+ color: #DF6860;
+}
+
 
 
 
