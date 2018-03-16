@@ -15,6 +15,7 @@
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
   z-index: 2;
+  display: inline-block;
   position: relative;
 }
 .banner p {
@@ -25,19 +26,42 @@
   font-family: $tagline;
 }
 
-.btn.btn-primary {
-  border-radius: 4px;
-}
-
 .underline-main-title {
-  background-color: #E32D6F;
+  background-color: #5C23FF;
   height: 25px;
-  width: 700px;
+  width: 100%;
   position: absolute;
   z-index: -1;
-  top: 33px;
-  right: 60px;
+  top: 0.65em;
   opacity: 0.90;
 }
 
 
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.form_box {
+  background-color: rgba(255, 255, 255, 1);
+  width : 450px;
+  border-radius: 5px;
+}
+
+.form {
+  color: black;
+  margin-left : 25px;
+  margin-right : 25px;
+}
+
+.form h1 {
+  font-size: 50px;
+}
+
+
+#new_vine {
+  border-radius: 5px;
+  border-color: #76B39D;
+}

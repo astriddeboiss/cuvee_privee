@@ -2,9 +2,19 @@ class VinesController < ApplicationController
 
   skip_before_action :authenticate_user!, only:[:index, :show]
 
-
   def index
-    @vines = Vine.all
+    @vines = Vine.where.not(latitude: nil, longitude: nil)
+
+    @vines = @vines.where(price: params[:price]) if params[:price]
+    @vines = @vines.where(variety: params[:variety]) if params[:variety]
+
+    @markers = @vines.map do |vine|
+      {
+        lat: vine.latitude,
+        lng: vine.longitude,
+        infoWindow: { content: render_to_string(partial: "/vines/map_box", locals: { vine: vine }) }
+      }
+    end
   end
 
   def show
@@ -32,6 +42,6 @@ class VinesController < ApplicationController
   private
 
   def vine_params
-    params.require(:vine).permit(:name, :description, :picture, :price, :location, :variety)
+    params.require(:vine).permit(:name, :description, :picture, :price, :location, :variety, :color)
   end
 end

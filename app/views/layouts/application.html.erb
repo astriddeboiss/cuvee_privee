@@ -11,17 +11,15 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-
     <%= render 'shared/flashes' %>
-  
-    <% if user_signed_in? %>
-    <%= render 'shared/navbar_signed_in' %>
-    <% else %>
     <%= render 'shared/navbar' %>
-    <% end %>
+    <div class="sticky-footer">
     <%= yield %>
+    </div>
+    <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
-    <%= render 'shared/footer' %>
+<%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
+<%= javascript_pack_tag 'map' %>
   </body>
 </html>
