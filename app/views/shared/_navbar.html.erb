@@ -7,7 +7,7 @@
     </a>
 
     <!-- Right Navigation -->
-    <div class="navbar-wagon-right-signed-in hidden-xs hidden-sm position">
+    <div class="navbar-wagon-right hidden-xs hidden-sm position">
       <%= link_to "Proposer des Vignes", new_vine_path, :class =>"navbar-wagon-item navbar-wagon-link" %>
       <% profile_pic_path = current_user.picture.url.nil? ? "http://kitt.lewagon.com/placeholder/users/Gumbet" : cl_image_path(current_user.picture, height: 35, width: 35, crop: :fill) %>
             <div class="navbar-wagon-item">

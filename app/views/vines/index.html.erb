@@ -1,10 +1,12 @@
 
-
-<h1>Nos vignes</h1>
+<div id="index-title">
+<h1 >Nos vignes</h1>
  <%= form_tag(vines_path, :id => "index-search", :method => :get) do %>
-    <%= select_tag( :price, options_for_select(Vine.prices, selected: params[:price]))%>
-    <%= select_tag( :variety, options_for_select(Vine.varieties, selected: params[:variety]), id: "variety-tag" )%>
+    <p>Prix: <%= select_tag( :price, options_for_select(Vine.prices, selected: params[:price]), id: "price-tag", include_blank: true ) %></p>
+    <p>Variété: <%= select_tag( :variety, options_for_select(Vine.varieties, selected: params[:variety]), id: "variety-tag", include_blank: true ) %></p>
+    <%= submit_tag "Submit", class: "hidden" %>
   <% end %>
+</div>
 <div class="product-list">
   <div class="wrapper-cards">
   <% @vines.each do |vine|%>
@@ -27,7 +29,7 @@
         <% end %>
 
         <li id="card-title"> <%= vine.name %></li>
-        <li id="price"> <%= vine.price %></li>
+        <li id="price">€<%= vine.price %></li>
       </ul>
       <%= link_to "", vine_path(vine), class: "card-link" %>
     </div>

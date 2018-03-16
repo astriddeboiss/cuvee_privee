@@ -12,7 +12,7 @@
     <% vine.bookings.each do |booking| %>
       <li class="message">
         <img class="profile-pic" src="images/gab.png" alt="">
-        <p class="user_name"> <strong><%=booking.user.first_name.capitalize %> <%=booking.user.last_name.capitalize %></strong> <br> <%=booking.start_at %></p></strong></p>
+        <p class="user_name"> <strong><%=booking.user.first_name %> <%=booking.user.last_name %></strong> <br> <%=booking.start_at %></p></strong></p>
         <p class="vine_name"><strong><%= vine.name %></strong> : <%= booking.status %> <br> <%= vine.description %> </p>
         <div class="prix">
           <%= simple_form_for(booking) do |f| %>
