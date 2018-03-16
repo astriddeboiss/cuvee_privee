@@ -1,9 +1,14 @@
 
-<h1>Nos vignes</h1>
-<%= form_tag(vines_path, :id => "index-search", :method => :get) do %>
-<%= select_tag( :price, options_for_select(Vine.prices, selected: params[:price]))%>
-<%= select_tag( :variety, options_for_select(Vine.varieties, selected: params[:variety]), id: "variety-tag" )%>
-<% end %>
+
+<div id="index-title">
+<h1 >Nos vignes</h1>
+ <%= form_tag(vines_path, :id => "index-search", :method => :get) do %>
+    <p>Prix: <%= select_tag( :price, options_for_select(Vine.prices, selected: params[:price]), id: "price-tag", include_blank: true ) %></p>
+    <p>Variété: <%= select_tag( :variety, options_for_select(Vine.varieties, selected: params[:variety]), id: "variety-tag", include_blank: true ) %></p>
+    <%= submit_tag "Submit", class: "hidden" %>
+  <% end %>
+</div>
+
 <div class="product-list">
   <div class="wrapper-cards">
     <div class="row">
@@ -26,14 +31,10 @@
               <li id="wine-type"><span id="color-rose"></span> <%= vine.variety %><span id="dot">  ·  </span> <%= vine.location %></li>
               <% end %>
 
-              <li id="card-title"> <%= vine.name %></li>
-              <li id="price"> <%= vine.price %></li>
-            </ul>
-            <%= link_to "", vine_path(vine), class: "card-link" %>
-          </div>
-
-        </div>
-      <% end %>
+        <li id="card-title"> <%= vine.name %></li>
+        <li id="price">€<%= vine.price %></li>
+      </ul>
+      <%= link_to "", vine_path(vine), class: "card-link" %>
     </div>
 </div>
 <div class= "map-container">

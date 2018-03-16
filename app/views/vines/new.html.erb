@@ -4,23 +4,23 @@
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,36,61,0.2) 50%), url(<%= image_path 'background3.jpg' %>);">
   <div class="container">
     <div class = "formulaire">
-        <div class="row form_box">
-          <div class="form">
-            <h1 id="title-new-vine">Proposer un pied de vigne</h1>
-            <%= simple_form_for @vine do |f|%>
-              <%= f.input :name, placeholder: 'Nom du domaine', label: false %>
-              <%= f.input :color, placeholder: 'Type', label: false, :collection => %w[Rouge Blanc Rosé] %>
-              <%= f.input :variety, placeholder: 'Variété', label: false %>
-              <%= f.input :location, placeholder: 'Région', label: false %>
-              <%= f.input :description, placeholder: 'Description', label: false %>
-              <%= f.input :price, placeholder: 'Prix', label: false %>
-              <%= f.input :picture, label: false %>
-              <%= f.input :picture_cache, as: :hidden %>
-              <%= f.submit "Ajouter mes vignes", class: "boutton_de_l_espace" %>
-            <% end %>
-          </div>
+      <div class="row form_box">
+        <div class="form">
+          <h1 id="title-new-vine">Proposer un pied de vigne</h1>
+          <%= simple_form_for @vine do |f|%>
+            <%= f.input :name, placeholder: 'Nom du domaine', label: false %>
+            <%= f.input :color, placeholder: 'Type', label: false, :collection => %w[Rouge Blanc Rosé] %>
+            <%= f.input :variety, placeholder: 'Variété', label: false %>
+            <%= f.input :location, placeholder: 'Région', label: false %>
+            <%= f.input :description, placeholder: 'Description', label: false %>
+            <%= f.input :price, placeholder: 'Prix', label: false %>
+            <%= f.input :picture, label: false %>
+            <%= f.input :picture_cache, as: :hidden %>
+            <%= f.submit "Ajouter mes vignes", class: "boutton_de_l_espace" %>
+          <% end %>
         </div>
       </div>
+    </div>
   </div>
 </div>
 
