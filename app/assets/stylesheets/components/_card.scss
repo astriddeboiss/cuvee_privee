@@ -7,7 +7,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .main-container {
@@ -34,6 +34,7 @@
 
 .card:hover {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  text-decoration: none;
 }
 
 .avatar {
@@ -71,8 +72,28 @@ ul.item-description {
   font-weight: 700;
 }
 
-#color {
-  background-color: #970747;
+#color-red {
+  background-color: #ed3436;
+  height: 10px;
+  width: 10px;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#color-white {
+  background-color: #ece161;
+  height: 10px;
+  width: 10px;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#color-rose {
+  background-color: #fc7b7f;
   height: 10px;
   width: 10px;
   text-align: center;
@@ -98,3 +119,15 @@ li#card-title {
   font-size: 15px;
 
 }
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+
