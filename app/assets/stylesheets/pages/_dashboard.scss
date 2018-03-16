@@ -1,0 +1,93 @@
+@import url("components/avatar.css");
+@import url("components/message.css");
+@import url("components/tabs.css");
+
+body {
+  margin: 0;
+  margin-bottom: 100px;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 15px;
+}
+
+p {
+  line-height: 25px;
+}
+
+.text-center {
+  text-align: center;
+}
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+}
+
+.inbox {
+  border: 1px solid rgba(0,0,0,.2);
+  padding: 10px;
+  margin: 0px;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+}
+
+.message:last-child {
+  border-bottom: none;
+}
+
+.prix {
+  line-height: 10px;
+  width: 25%;
+}
+
+.prix h2 {
+  opacity: 0.3;
+}
+
+
+.tab {
+  text-decoration: none;
+  color: black;
+  opacity: 0.2;
+  padding: 10px;
+}
+
+.active {
+  opacity: 1;
+  border-bottom: 5px solid #46A399;
+  padding: 10px;
+}
+
+.tabs {
+  display: flex;
+
+}
+
+.mes_vignes {
+  padding-left: 0px;
+  list-style: none;
+}
+.message {
+  /* Your turn to design a flexbox message */
+}
+
+/* Your avatar CSS code here */
+.profile-pic {
+  border-radius: 50%;
+  width: 25%;
+}
+
+p.user_name {
+  width: 25%;
+}
+
+.vine_name {
+ width: 25%
+}
+
+
+
