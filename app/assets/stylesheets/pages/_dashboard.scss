@@ -2,24 +2,11 @@
 @import url("components/message.css");
 @import url("components/tabs.css");
 
-body {
-  margin: 0;
-  margin-bottom: 100px;
-  font-family: 'Varela Round', sans-serif;
-  font-size: 15px;
-}
 
-p {
-  line-height: 25px;
-}
 
-.text-center {
-  text-align: center;
-}
-.container {
-  max-width: 900px;
-  margin: 50px auto;
-}
+
+
+
 
 .inbox {
   border: 1px solid rgba(0,0,0,.2);
@@ -98,12 +85,12 @@ p.user_name {
 
 .vine_name_accepted {
  width: 45%;
- color: green;
+ color: #5AB498;
 }
 
 .vine_name_declined {
  width: 45%;
- color: red;
+ color: #DF6860;
 }
 
 
