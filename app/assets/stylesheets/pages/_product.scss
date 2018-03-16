@@ -1,6 +1,7 @@
 .product-list{
   display: flex;
-  align-items: stretch;
+  justify-content: space-between;
+
 }
 .wrapper-cards{
   flex : 0 0 66%;
