@@ -14,6 +14,7 @@
         <% profile_pic_path = cl_image_path(booking.user.picture, height: 35, width: 35, crop: :fill) %>
         <%= image_tag profile_pic_path, class: "avatar-navbar" %>
         <img class="profile-pic" src="images/gab.png" alt="">
+
         <p class="user_name"> <strong><%=booking.user.first_name.capitalize %> <%=booking.user.last_name.capitalize %></strong> <br> <%=booking.start_at %></p></strong></p>
         <% if booking.status == "En attente" %>
           <p class="vine_name"><strong><%= vine.name %></strong> : <%= booking.status %> <br> <%= vine.description %> </p>
@@ -21,6 +22,7 @@
           <p class="vine_name_accepted"><strong><%= vine.name %></strong> : <%= booking.status %> <br> <%= vine.description %> </p>
         <% else %>
           <p class="vine_name_declined"><strong><%= vine.name %></strong> : <%= booking.status %> <br> <%= vine.description %> </p>
+
           <% end %>
         <div class="prix">
           <% if booking.status == "En attente" %>
