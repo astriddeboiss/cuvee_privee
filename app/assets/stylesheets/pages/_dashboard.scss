@@ -64,7 +64,11 @@ p {
 
 .tabs {
   display: flex;
+}
 
+a.tabs {
+  display: flex;
+  text-decoration: none;
 }
 
 .mes_vignes {
@@ -78,16 +82,30 @@ p {
 /* Your avatar CSS code here */
 .profile-pic {
   border-radius: 50%;
-  width: 25%;
+  width: 15%;
 }
 
 p.user_name {
   width: 25%;
 }
 
-.vine-name {
- width: 25%
+
+.vine_name {
+ width: 45%
+
+
 }
+
+.vine_name_accepted {
+ width: 45%;
+ color: green;
+}
+
+.vine_name_declined {
+ width: 45%;
+ color: red;
+}
+
 
 
 
