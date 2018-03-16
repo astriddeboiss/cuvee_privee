@@ -6,8 +6,9 @@
 .wrapper-cards {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex : 0 0 66%;
 }
 
 .main-container {
@@ -37,7 +38,7 @@
   text-decoration: none;
 }
 
-.avatar {
+.avatar-card {
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -72,8 +73,28 @@ ul.item-description {
   font-weight: 700;
 }
 
-#color {
-  background-color: #970747;
+#color-red {
+  background-color: #ed3436;
+  height: 10px;
+  width: 10px;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#color-white {
+  background-color: #ece161;
+  height: 10px;
+  width: 10px;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#color-rose {
+  background-color: #fc7b7f;
   height: 10px;
   width: 10px;
   text-align: center;

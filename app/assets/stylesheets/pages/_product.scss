@@ -1,10 +1,9 @@
 .product-list{
   display: flex;
-  align-items: stretch;
+  justify-content: space-between;
+
 }
-.wrapper-cards{
-  flex : 0 0 66%;
-}
+
 .map-container{
   flex : 1 0 auto;
 }

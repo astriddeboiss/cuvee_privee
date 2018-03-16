@@ -1,0 +1,40 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px 20px;
+}
+
+.form_box {
+  background-color: rgba(255, 255, 255, 1);
+  width : 450px;
+  border-radius: 2px;
+}
+
+.form {
+  color: black;
+  margin-left : 25px;
+  margin-right : 25px;
+  size: 14px;
+}
+
+#title-new-vine {
+  font-size: 30px;
+  text-align: right;
+  display: block;
+  text-align: left;
+  color: #393939;
+  margin-left: 0px;
+  margin-top: 20px;
+}
+
+.boutton_de_l_espace {
+  color: white;
+  font-weight: 700;
+  font-family: $headers-font;
+  background-color: rgb(154,6,72);
+  width: 100%;
+  margin-bottom: 20px;
+  height: 50px;
+  border-radius: 5px;
+  border: none !important;
+}
